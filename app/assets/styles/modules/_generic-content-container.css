@@ -1,0 +1,20 @@
+/* this is not strictly BEM. It is easier than writing classes for each paragraph. */
+
+.generic-content-container {
+
+    p {                       /* paragraph defaults to 1rem for phone screens */
+        font-weight: 300;
+        line-height: 1.65;
+        margin: 0 0 1.8rem 0;
+
+        @mixin atSmall {
+            font-size: 1.125rem;
+        }
+    }
+
+    p a {                   /* could have nested a inside p above but code gets messy when nesting greater than one level */
+        font-weight: 700;
+    }
+
+}
+

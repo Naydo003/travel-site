@@ -1,5 +1,10 @@
 .large-hero {
     position: relative;
+    border-bottom: solid 10px $mainBlue;
+
+    &__image {
+        display: block;     /* in-line treats as para and allows little space at bottom of lines for text below the line eg g, q y. Blocks do not have this space. */
+    }
   
     &__text-content {
       position: absolute;
@@ -14,19 +19,13 @@
       font-weight: 300;
       color: $mainBlue;
       margin: 0;
-      font-size: 1.1rem;
+      font-size: 1.5rem;
     
       @mixin atSmall {
-        font-size: 2rem;
+        font-size: 2.9rem;
       }
   
-      @mixin atMedium {
-        font-size: 3.2rem;
-      }
-  
-      @mixin atLarge {
-        font-size: 4.8rem;
-      }
+
   
     }
   
@@ -44,12 +43,16 @@
   
     &__description {
       color: #FFF;
-      font-size: 1.875rem;
+      font-size: 1.1rem;
       font-weight: 100;
       text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
       max-width: 30rem;
       margin-left: auto;
       margin-right: auto;
+
+      @mixin atSmall {
+        font-size: 1.875rem;
+      }
     }
   
   }
