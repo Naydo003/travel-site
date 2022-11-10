@@ -9,12 +9,21 @@
         box-sizing: border-box;    /* old mate applies this globally. padding is added onto specified width so border-box is used to make it eat into the div instead  */
     }
 
+    &--gutters-large > div {          
+        padding-right: 100px;
+        box-sizing: border-box;    
+    }
     /* The above will not allow the writing in columns to butt up to right of div. 
     This allows the padding on the right most column to go into main wrapper. 
     Overflow: hidden is done in the wrapper so this protrusion is cut off. */
     &--gutters {
         margin-right: -65px;
     }
+
+    &--gutters-large {
+        margin-right: -100px;
+    }
+
 
     /* We want a margin at bottom of "columns" when they are stacked on small screens.
     This margin is turned off though when the columns are side-by-side in atMedium mixin */
@@ -33,6 +42,11 @@
             width: 33.333%;
         }
     
+        &__medium-6 {
+            float: left;
+            width: 50%;
+        }
+
         &__medium-8 {
             float: left;
             width: 66.666%;
