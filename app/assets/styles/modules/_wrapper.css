@@ -1,0 +1,27 @@
+.wrapper {
+    padding-left: 18px;
+    padding-right: 18px;
+    max-width: 1236px;  /* The extra 36px is to make space for the padding */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;  /* See _row.css , necessary as right column goes into wrapper. */
+
+    &--medium {
+        max-width: 976px;
+    }
+
+    .wrapper {                    /* when a wrapper is inside another wrapper we nullify second wrappers padding */
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* sometimes we want to add margin at bottom of wrapper */
+    &--b-margin {
+        margin-bottom: 1rem;
+
+        @mixin atSmall {
+        margin-bottom: 3.875rem;
+        }
+    }
+
+}
