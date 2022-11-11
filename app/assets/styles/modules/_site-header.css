@@ -1,0 +1,52 @@
+.site-header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding: 10px 0;
+
+    @mixin atMedium {
+        background-color: rgba(47, 85, 114, 0.3);     /* Can use postcss-hexrgba to be able to insert hexadecimal color codes (ie our $mainBlue) in here */
+
+    }
+
+    &__btn-container {
+        float: right;
+    }
+
+    &__logo {
+        position: absolute;
+        background-color: $mainBlue;
+        padding: 13px 26px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @mixin atMedium {
+            left: auto;
+            transform: translateX(0);
+            padding: 25px 35px;
+
+        }
+    }
+
+    &__menu-content {
+        display: none;
+
+        @mixin atMedium {
+            display: block;
+        }
+    }
+
+    &__menu-icon {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    @mixin atMedium {
+        display: none;
+    }
+}
