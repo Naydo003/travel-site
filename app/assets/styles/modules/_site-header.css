@@ -43,7 +43,7 @@
         transition: all .3s ease-out;
         z-index: -10;                       /* because we used opacity instead of display: none the buttons will be clickable. This hides them behind things */
         position: relative;                 /* z-index only works when pos: rel */
-        padding-top: 100px;
+        padding-top: 90px;
         text-align: center;
         transform: scale(1.2);
 
@@ -64,15 +64,62 @@
     &__menu-icon {
         width: 20px;
         height: 20px;
-        background-color: white;
         position: absolute;
         top: 10px;
         right: 10px;
         z-index: 10;
+
+        &__top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            transition: all .3s ease-out;
+        }
+
+        &__middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            transition: all .3s ease-out;
+        }
     
+        &__bottom {
+            position: absolute;
+            top: 16px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            transition: all .3s ease-out;
+
+        }
 
         @mixin atMedium {
         display: none;
         }
     }
+
+    &__menu-icon--close-X {
+        .site-header__menu-icon__top {
+            transform-origin: 0 0;
+            transform: rotate(45deg) scaleX(1.25)
+        }
+
+        .site-header__menu-icon__middle {
+            opacity: 0;
+        }
+
+        .site-header__menu-icon__bottom {
+            transform-origin: 0 100%;
+            transform: rotate(-45deg) scaleX(1.25) translateY(1px)
+        }
+    }
+
+
 }
