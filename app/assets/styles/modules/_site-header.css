@@ -127,6 +127,7 @@
             transform-origin: 0 100%;
             transform: rotate(-45deg) scaleX(1.25) translateY(1px)
         }
+        /* Note: the above was done using ::before and ::after psuedo-classes and only needing the middle class. Didn't reduce much code though. */
     }
 
 
