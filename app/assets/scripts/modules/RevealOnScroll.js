@@ -31,7 +31,6 @@ class RevealOnScroll {
             }
         })
     }
-
     calculateIfScrolledTo(el) {
         // console.log('El calculated')
         if (window.scrollY + this.browserHeight > el.offsetTop) {

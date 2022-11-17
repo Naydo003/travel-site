@@ -4,6 +4,7 @@ import MobileMenu from './modules/MobileMenu'
 import RevealOnScroll from './modules/RevealOnScroll'
 import StickyHeader from './modules/StickyHeader'
 
+
 // If constructors are not going to have methods called outside of the class file. No need to save the new instance to a variable.
 // If modules need to interact they will trigger events which can be passed around. Need to save to variable.
 // See npm event-emitter
